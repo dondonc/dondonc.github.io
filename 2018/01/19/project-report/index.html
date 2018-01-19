@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.2 -->
+    <script>
+        window.materialVersion = "1.5.2"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            项目总结 | 
+        
+        Don&#39;s Blog
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" href="/img/favicon.png">
+
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="Don&#39;s Blog">
+    <meta name="keywords" content="Don&#39;s Blog">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?ezyEvm8ST5CGfpA+kFFi1g==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Don&#39;s Blog">
+    <meta name="msapplication-starturl" content="http://yoursite.com/2018/01/19/project-report/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Don&#39;s Blog">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://yoursite.com/2018/01/19/project-report/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="项目总结 | Don&#39;s Blog">
+    <meta property="og:image" content="/img/favicon.png">
+    <meta property="og:description" content="Don&#39;s Blog">
+    
+
+    
+        <meta property="article:published_time" content="Fri Jan 19 2018 00:39:41 GMT+0800">
+        <meta property="article:modified_time" content="Fri Jan 19 2018 02:55:37 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://yoursite.com/2018/01/19/project-report/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://yoursite.com/2018/01/19/project-report/index.html",
+    "headline": "项目总结",
+    "datePublished": "Fri Jan 19 2018 00:39:41 GMT+0800",
+    "dateModified": "Fri Jan 19 2018 02:55:37 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "Don",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.jpg"
+        },
+        "description": "what the fuck are you looking at?!"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Don&#39;s Blog",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": "Don&#39;s Blog",
+    "description": "Don&#39;s Blog",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#项目"><span class="post-toc-number">1.</span> <span class="post-toc-text">项目</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#自定义表情商店"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">自定义表情商店</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#项目介绍："><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">项目介绍：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#项目要点："><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">项目要点：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#code"><span class="post-toc-number">1.1.3.</span> <span class="post-toc-text">code</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2018武神坛"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">2018武神坛</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#项目介绍：-1"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">项目介绍：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#项目要点：-1"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">项目要点：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#code-1"><span class="post-toc-number">1.2.3.</span> <span class="post-toc-text">code</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#年终奖分享H5"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">年终奖分享H5</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#项目介绍：-2"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">项目介绍：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#项目要点：-2"><span class="post-toc-number">1.3.2.</span> <span class="post-toc-text">项目要点：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#code-2"><span class="post-toc-number">1.3.3.</span> <span class="post-toc-text">code</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#小程序篇"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">小程序篇</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#项目介绍：-3"><span class="post-toc-number">1.4.1.</span> <span class="post-toc-text">项目介绍：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#项目要点：-3"><span class="post-toc-number">1.4.2.</span> <span class="post-toc-text">项目要点：</span></a></li></ol></li></ol></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                项目总结
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.jpg" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Don</strong>
+        <span>1月 19, 2018</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=项目总结&url=http://yoursite.com/2018/01/19/project-report/index.html&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=项目总结&url=http://yoursite.com/2018/01/19/project-report/index.html&via=Don" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/01/19/project-report/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com/2018/01/19/project-report/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p>项目总结！</p>
+<ol>
+<li>PC<br> a. 自定义表情商店</li>
+<li>移动<br> a. 2018武神坛<br> b. 年终奖分享H5</li>
+<li>微信小程序<br> a. 梦幻传图小程序<br> b. Monki试衣间<br> c. 考核系统小程序<br> d. 微信支付-无现金日</li>
+</ol>
+<h2 id="项目"><a href="#项目" class="headerlink" title="项目"></a>项目</h2><h3 id="自定义表情商店"><a href="#自定义表情商店" class="headerlink" title="自定义表情商店"></a>自定义表情商店</h3><p><a href="http://dhxy.163.com/sticker/" target="_blank" rel="noopener">项目地址</a></p>
+<h4 id="项目介绍："><a href="#项目介绍：" class="headerlink" title="项目介绍："></a>项目介绍：</h4><p>只有上传功能的小型图库系统</p>
+<h4 id="项目要点："><a href="#项目要点：" class="headerlink" title="项目要点："></a>项目要点：</h4><ol>
+<li>图片上传组件</li>
+<li>跨域请求时带上cookie登录信息</li>
+<li>上传接口参数字段名相同，无法直接写在formData内，只能直接拼接到url中</li>
+</ol>
+<h4 id="code"><a href="#code" class="headerlink" title="code"></a>code</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 服务器只能获取最后一个pic和picdesc的值</span></span><br><span class="line">$.ajax(&#123;</span><br><span class="line">    url: host + <span class="string">'g17emojishop_signup/g'</span>,</span><br><span class="line">    type: <span class="string">'POST'</span>,</span><br><span class="line">    timeout: <span class="number">5000</span>,</span><br><span class="line">    dataType: <span class="string">"json"</span>,</span><br><span class="line">    data: &#123; <span class="comment">//同字段情况下，最后一个会覆盖前面的值，服务器只会收到最后一个的pic和picdesc</span></span><br><span class="line">        pic: img1,</span><br><span class="line">        picdesc: desc1,</span><br><span class="line">        pic: img2,</span><br><span class="line">        picdesc: desc2,</span><br><span class="line">        pic: img3,</span><br><span class="line">        picdesc: desc3</span><br><span class="line">    &#125;,</span><br><span class="line">    xhrFields: &#123; <span class="comment">//跨域请求时需要带上cookie值时需要设置withCredentials</span></span><br><span class="line">        withCredentials: <span class="literal">true</span></span><br><span class="line">    &#125;,</span><br><span class="line">    crossDomain: <span class="literal">true</span>,</span><br><span class="line">    success: <span class="function">(<span class="params">data</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="comment">//success</span></span><br><span class="line">    &#125;,</span><br><span class="line">    error: <span class="function">(<span class="params">data</span>) =&gt;</span> &#123;&#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 参数拼接到url中</span></span><br><span class="line">$.ajax(&#123;</span><br><span class="line">    url: host + <span class="string">'g17emojishop_signup/g?type=1&amp;pic='</span> + img1 + <span class="string">'&amp;picdesc'</span> + desc1+ <span class="string">'&amp;pic'</span>  + img2 ,</span><br><span class="line">    type: <span class="string">'POST'</span>,</span><br><span class="line">    timeout: <span class="number">5000</span>,</span><br><span class="line">    dataType: <span class="string">"json"</span>,</span><br><span class="line">    xhrFields: &#123; <span class="comment">//跨域请求时需要带上cookie值时需要设置withCredentials</span></span><br><span class="line">        withCredentials: <span class="literal">true</span></span><br><span class="line">    &#125;,</span><br><span class="line">    crossDomain: <span class="literal">true</span>,</span><br><span class="line">    success: <span class="function">(<span class="params">data</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="comment">//success</span></span><br><span class="line">    &#125;,</span><br><span class="line">    error: <span class="function">(<span class="params">data</span>) =&gt;</span> &#123;&#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h3 id="2018武神坛"><a href="#2018武神坛" class="headerlink" title="2018武神坛"></a>2018武神坛</h3><p><a href="http://my.163.com/m/wst/" target="_blank" rel="noopener">项目地址</a></p>
+<h4 id="项目介绍：-1"><a href="#项目介绍：-1" class="headerlink" title="项目介绍："></a>项目介绍：</h4><p>赛事战报系统</p>
+<h4 id="项目要点：-1"><a href="#项目要点：-1" class="headerlink" title="项目要点："></a>项目要点：</h4><ol>
+<li>接口请求较多时整合通用代码，减少多余的代码</li>
+<li>babel编译导致BaiduTemplate模板报错</li>
+<li>es6的Template String模板字符串代替组件BaiduTemplate</li>
+</ol>
+<h4 id="code-1"><a href="#code-1" class="headerlink" title="code"></a>code</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//db.js</span></span><br><span class="line">nie.define(<span class="string">"DB"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> HOST = __debug ? <span class="string">'//g18-29163-test.webapp.163.com/'</span> : <span class="string">'//g18-29163.webapp.163.com/'</span>;</span><br><span class="line">    <span class="keyword">var</span> doAjax = <span class="function"><span class="keyword">function</span>(<span class="params">host, url, param, success, error, badRequest</span>) </span>&#123;</span><br><span class="line">        $.ajax(&#123;</span><br><span class="line">            type: <span class="string">'get'</span>,</span><br><span class="line">            url: host + url,</span><br><span class="line">            dataType: <span class="string">"jsonp"</span>,</span><br><span class="line">            data: param,</span><br><span class="line">            timeout: <span class="number">5000</span>,</span><br><span class="line">            success: <span class="function">(<span class="params">result</span>)=&gt;</span> &#123;</span><br><span class="line">                <span class="comment">//success</span></span><br><span class="line">            &#125;,</span><br><span class="line">            error: <span class="function">(<span class="params">XMLHttpRequest, textStatus, errorThrown</span>)=&gt;</span> &#123;</span><br><span class="line">                <span class="comment">//error</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        <span class="comment">//获取届次</span></span><br><span class="line">        query_video_period_list: <span class="function"><span class="keyword">function</span>(<span class="params">params, success</span>) </span>&#123;</span><br><span class="line">            doAjax(HOST, <span class="string">'query_video_period_list'</span>, params, success);</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="comment">//获取战报</span></span><br><span class="line">        query_champions: <span class="function"><span class="keyword">function</span>(<span class="params">params, success</span>) </span>&#123;</span><br><span class="line">            doAjax(HOST, <span class="string">'query_champions'</span>, params, success);</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="comment">//获取晋级树</span></span><br><span class="line">        query_winner_tree: <span class="function"><span class="keyword">function</span>(<span class="params">params, success</span>) </span>&#123;</span><br><span class="line">            doAjax(HOST, <span class="string">'query_winner_tree'</span>, params, success);</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="comment">//战报</span></span><br><span class="line">        query_battle_result: <span class="function"><span class="keyword">function</span>(<span class="params">params, success</span>) </span>&#123;</span><br><span class="line">            doAjax(HOST, <span class="string">'query_battle_result'</span>, params, success);</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="comment">//排行榜</span></span><br><span class="line">        query_ranks: <span class="function"><span class="keyword">function</span>(<span class="params">params, success</span>) </span>&#123;</span><br><span class="line">            doAjax(HOST, <span class="string">'query_ranks'</span>, params, success);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// main.js</span></span><br><span class="line"><span class="keyword">let</span> DB = nie.require(<span class="string">'DB'</span>);</span><br><span class="line">DB.query_champions(&#123;preid&#125;,(res)=&gt;&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(res)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//babel编译时会报错</span></span><br><span class="line"><span class="keyword">let</span> tmpl = __inline(<span class="string">'../../template/tmp1.tmpl'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//解决方法</span></span><br><span class="line"><span class="comment">// 1. 引入模板的js文件不要编译</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 2. 用es6的Template String模板字符串代替</span></span><br><span class="line"><span class="keyword">let</span> html = <span class="string">''</span>;</span><br><span class="line">html += <span class="string">`&lt;li data-id="<span class="subst">$&#123;data.id&#125;</span>"&gt;<span class="subst">$&#123;data.val&#125;</span>&lt;/li&gt;`</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="年终奖分享H5"><a href="#年终奖分享H5" class="headerlink" title="年终奖分享H5"></a>年终奖分享H5</h3><p><a href="http://dhxy.163.com/m/2017/nzj/share" target="_blank" rel="noopener">项目地址</a><br>PS:该项目需要游戏内生成，带上data-key才能正常登录</p>
+<h4 id="项目介绍：-2"><a href="#项目介绍：-2" class="headerlink" title="项目介绍："></a>项目介绍：</h4><p>微信，微博，QQ授权项目</p>
+<h4 id="项目要点：-2"><a href="#项目要点：-2" class="headerlink" title="项目要点："></a>项目要点：</h4><ol>
+<li>需要进行微信&amp;微博&amp;QQ三个平台授权验证登录</li>
+<li>授权项目需要让编辑或者营销提供对应公众号 || 营销号的appId</li>
+<li>授权项目详见文档。<a href="http://res.nie.netease.com/comm/doc/assembly/%E5%BE%AE%E4%BF%A1%E6%8E%88%E6%9D%83%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B%E8%AF%A6%E8%A7%A3201601.html" target="_blank" rel="noopener">点我</a></li>
+</ol>
+<h4 id="code-2"><a href="#code-2" class="headerlink" title="code"></a>code</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//微博，QQ授权流程跟微信流程没有太大区别，只需要在调授权登录接口的时候把访问url传给接口即可</span></span><br><span class="line"><span class="keyword">if</span> (options.authorType != <span class="string">'wx'</span>) &#123; <span class="comment">//授权类型不为微信时，formData带上重定向url（当前接口字段名为redirect_uri）</span></span><br><span class="line">    <span class="keyword">if</span> (options.isDebug) &#123; <span class="comment">//测试地址因为跨域问题，所以需要经过一个中转授权获取code</span></span><br><span class="line">        loginData.redirect_uri = <span class="string">'http://dhxy.163.com/2017/weibo/redirector/index.html?source_uri='</span> + rUrl;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        loginData.redirect_uri = options.pageUrl;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//中转授权页面</span></span><br><span class="line"><span class="keyword">if</span> (location.search) &#123;</span><br><span class="line">    <span class="keyword">var</span> url = location.href;</span><br><span class="line">    <span class="keyword">var</span> code = params(url, <span class="string">"code"</span>)</span><br><span class="line">    <span class="keyword">if</span> (code) &#123; <span class="comment">//如果url上带有code参数则说明是从微信授权成功返回</span></span><br><span class="line">        <span class="keyword">var</span> source_uri = <span class="built_in">unescape</span>(params(url, <span class="string">"source_uri"</span>));</span><br><span class="line">        <span class="comment">//alert(source_uri);</span></span><br><span class="line">        location.href = source_uri + <span class="string">"&amp;code="</span> + code;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123; <span class="comment">//如果url上没有code就是从项目页面跳转过来需要请求微信授权</span></span><br><span class="line">        <span class="keyword">var</span> client_id = params(url, <span class="string">"client_id"</span>);</span><br><span class="line">        <span class="keyword">var</span> source_uri = <span class="built_in">escape</span>(<span class="built_in">decodeURIComponent</span>(params(url, <span class="string">"redirect_uri"</span>)));</span><br><span class="line">        <span class="keyword">var</span> response_type = params(url, <span class="string">"response_type"</span>);</span><br><span class="line">        <span class="keyword">var</span> hash = location.hash;</span><br><span class="line">        <span class="keyword">var</span> redirect_uri = <span class="built_in">encodeURIComponent</span>(location.origin + location.pathname + <span class="string">"?source_uri="</span> + source_uri);</span><br><span class="line">        location.href = <span class="string">"https://api.weibo.com/oauth2/authorize?client_id="</span> + client_id + <span class="string">"&amp;redirect_uri="</span> + redirect_uri + <span class="string">"&amp;response_type="</span> + response_type + hash;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="小程序篇"><a href="#小程序篇" class="headerlink" title="小程序篇"></a>小程序篇</h3><p>微信小程序入口搜索：</p>
+<ol>
+<li>梦幻西游牛图站</li>
+<li>Monki好友赞赏试衣间（服务器关闭）</li>
+<li>考核系统（未发布）</li>
+<li>微信支付无现金（以下线）</li>
+</ol>
+<h4 id="项目介绍：-3"><a href="#项目介绍：-3" class="headerlink" title="项目介绍："></a>项目介绍：</h4><p>小程序的路上磕得头破血流，撞得鼻青脸肿！！！别叫微信小程序了，叫微信小BUG吧！经过1年的洗礼，官方组件的bug和兼容问题已经少了很多了，开发起来难度也不算大，但因为没接触过应用类型的项目，对应用的启动卸载过程不了解，出了不少问题。另外，遇到神奇无解的bug的时候，总能在社区找到“同道中人”，总结一句话，多逛社区能让你少踩很多坑！！！<a href="https://developers.weixin.qq.com/home" target="_blank" rel="noopener">社区地址</a></p>
+<h4 id="项目要点：-3"><a href="#项目要点：-3" class="headerlink" title="项目要点："></a>项目要点：</h4><p>1.关于小程序的启动机制：「冷启动」and 「热启动」</p>
+<blockquote>
+<p>假如用户已经打开过某小程序，然后在一定时间内再次打开该小程序，此时无需重新启动，只需将后台态的小程序切换到前台，这个过程就是热启动；冷启动指的是用户首次打开或小程序被微信主动销毁后再次打开的情况，此时小程序需要重新加载启动。</p>
+</blockquote>
+<pre><code>运行机制
+a:小程序没有重启的概念
+b:当小程序进入后台，客户端会维持一段时间的运行状态，超过一定时间后（目前是5分钟）会被微信主动销毁
+c:置顶的小程序不会被微信主动销毁
+d:当收到系统内存告警也会进行小程序的销毁
+</code></pre><p>　</p>
+<p>2.关于进入小程序的场景值获取问题</p>
+<blockquote>
+<p>小程序的场景值需要在app.js中的onLunch或onShow获取，在page中只能在onLoad中获取，无法通过onShow获取</p>
+</blockquote>
+<p>　</p>
+<p>3.关于<a href="">测试版</a>（开发过程中，开发者可以预览的版本）和<a href="">体验版</a>（开发者，体验者均能体验的版本）以及<a href="">正式版</a>（审核通过的版本，可以通过小程序入口搜索得到）三个版本间要注意的小细节</p>
+<pre><code>a. 测试版中的代码永远是最新的，无缓存，无关冷热启动，只要重新扫描预览二维码，代码就是最新的！
+
+b. 体验版和正式版一样，会有「冷启动」and 「热启动」的区别，也会有5分钟的保存时间，
+    5分钟以内小程序的状态会被保留，不会销毁，超过5分钟则销毁小程序，再次启动时所有状态都是新的。
+
+c. 测试功能的时候以测试版为准，体验版与正式版可以说是一致的，
+    所以小程序开发完成后一定！一定！一定！优先以体验版的测试结果为准！
+    有bug一定要修！不要说什么我测试版没问题啊！！上线爆炸的话别怪我没提醒过你！！！
+</code></pre><p>　</p>
+<p>4.不要尝试用移动H5的标准去看小程序的功能需求！千万不要！</p>
+<blockquote>
+<p>具体什么原因，主要是微信小程序在根本上和普通的H5应用还是有区别的，小程序本身没有DOM和BOM，也没有window，ocument这些概念，所有的组件及API都是小程序自身的规范实现然后以尽可能贴近普通H5的规范呈现，实际还是会有许多意想不到的问题，包括但不限于组件性能，组件渲染层级，动画性能，等等等等…总之，在看到需求列表的时候，除了确认功能细节外！一定要确认清楚小程序是否有提供相应的接口或者API去实现，而不是以H5的角度去看！切记！切记！切记！</p>
+</blockquote>
+<p>　</p>
+<p>5.关于什么功能需要组件化，以及什么样的小程序需要引入状态管理思想</p>
+<blockquote>
+<p>A: 什么样的功能需要组件化，这个很好区分，在单页面内或跨页面使用次数在1次以上的，都可以将功能组件化实现，除了减少开发重复的代码，还能在不同页面不同位置多次调用，何乐而不为！</p>
+<p>B: 至于何种类型，何种需求的小程序需要引入状态管理思想，我个人认为，当一个小程序A页面的状态需要同时反映到B页面甚至C，D，E页面的时候，并且当子页面的交互操作会改变父级页面的状态时，最好是引入状态管理思想，统一的一个状态管理系统，能让你很好的处理多个页面同时发生状态变化的情况，页面中的一个动作，数据的变动，都会提交到统一的管理中心，然后管理中心根据变化的数据去处理不同页面不同位置的状态渲染，妈妈再也不用担心我漏这漏那了！！</p>
+</blockquote>
+<p>　</p>
+<p>6.小程序的坑和问题遇到的还是不少的，不一一列出来了，后续会陆续把遇到的问题都整理到公司博客中，有兴趣可以关注下，顺便贴一下已经整理过的bug文章，地址在后面。<a href="http://modiarts.com:8090/pages/viewpage.action?pageId=3964957" target="_blank" rel="noopener">我是地址</a></p>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2018/01/19/share20180119/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2018/01/18/year-end-review/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.jpg" alt="Don's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        youremail@email.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="#" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2018/01/">一月 2018<span class="sidebar_archives-count">3</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+
+    <!-- Pages  -->
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            主题 - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/twitter" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
+                <span class="visuallyhidden">Twitter</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Facebook -->
+    
+        <a href="https://www.facebook.com/facebook" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook">
+                <span class="visuallyhidden">Facebook</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Google + -->
+    
+        <a href="https://www.google.com/" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-gplus">
+                <span class="visuallyhidden">Google Plus</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+    
+    <!-- V2EX -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>Don's Blog
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?wgjW/HuQG9JDgvPDPoRAng==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?V/53wGualMuiPM3xoetD5Q==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>
